@@ -92,6 +92,9 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    text-decoration: none;
+    color:#282c3f;
 }
 
 
@@ -173,11 +176,15 @@ header{
 .itemsContainer{
     width: 80%;
     margin:40px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .itemContainer{
     width:200px;
     padding:1px;
+    margin: 10px;
     cursor: default;
     transition: box-shadow 0.3s ease-in-out;
 }
@@ -273,8 +280,23 @@ header{
     padding: 5px 15px;   /*padding: top-bottom left-right;*/
     color:white;
     border: none;
+    cursor: pointer;
 }
 
-
+.bagItemCount{
+    white-space: nowrap;
+    background-color: #ff3f6c;
+    padding: 0px 6px;
+    border-radius: 50%;
+    line-height: 18px;
+    height: 18px;
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    left: 16px;
+    top: -6px;
+    font-weight: 700;
+}
 
 

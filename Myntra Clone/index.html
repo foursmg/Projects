@@ -5,14 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Myntra</title>
         <link rel="stylesheet" href="css/index.css">
-        <link rel="icon" href="/Projects/Myntra Clone/media/2249158.webp">
-        <link rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />        
+        <link rel="icon" href="media/myntraIcon.webp">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />        
     </head>
     <body>
         <header>
             <div class="logoContainer">
-                <a href="#"> <img class="myntraHome" src="/Projects/Myntra Clone/media/2249158.webp" alt="Myntra Home"></a>
+                <a href="#"> <img class="myntraHome" src="media/myntraIcon.webp" alt="Myntra Home"></a>
             </div>
 
             <!-- nav Bar  -->
@@ -43,10 +42,11 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
                     <span class="actionName">Wishlist</span>
                 </div>
 
-                <div class="actionContainer">
-                    <span class="material-symbols-outlined actionIcon">shopping_cart</span>
-                    <span class="actionName">Bag</span>
-                </div>
+                <a class="actionContainer" href="/Myntra Clone/page/bag.html">
+            <span class="material-symbols-outlined actionIcon">shopping_bag</span>
+            <span class="actionName">Bag</span>
+            <span class="bagItemCount">0</span>    
+            </a>
             </div>
         
         </header>
@@ -104,9 +104,8 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
         <div class="copyright">
             © 2026 www.myntra.com. All rights reserved.
         </div>
-
-        <h1>Checking git</h1>
         </footer>
+        <script src="data/items.js"></script>
         <script src="script/index.js"></script>
     </body>
 </html>

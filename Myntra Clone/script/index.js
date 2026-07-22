@@ -1,21 +1,43 @@
-let itemsContainerElement = document.querySelector('.itemsContainer');
+let bagItems;
+onLoad();
 
-let item = {
-    item_image: 'media/products img/bodyScrub.webp',
-    rating: {
-        stars: 4.5,
-        noOfReviews: 1400,
-    },
-    companyName: `MCaffeine`,
-    itemName: `Blueberry Breeze Body Scrub small round box`,
-    currentPrice: 369,
-    originalPrice: 449,
-    discountPercentage: 20,
+function onLoad(){
+    let bagItemStr = localStorage.getItem('bagItems');
+    bagItems = bagItemStr ? JSON.parse(bagItemStr) : [];
+    displayItemsOnHomePage();
+    displayBagIcon();
 }
 
 
-itemsContainerElement.innerHTML = `<div class="itemContainer">
-                <img class="itemImage" src="${item.item_image}" alt="body Scrub Img">
+function addToBag(itemId){
+    bagItems.push(itemId);
+    localStorage.setItem('bagItems',JSON.stringify(bagItems));
+    displayBagIcon();
+}
+
+function displayBagIcon(){
+    let bagItemCountElement = document.querySelector('.bagItemCount');
+    if(bagItems.length > 0){
+        bagItemCountElement.style.visibility = 'visible';
+        bagItemCountElement.innerText = bagItems.length;
+    }else{
+        bagItemCountElement.style.visibility = 'hidden';
+    }
+}
+
+function displayItemsOnHomePage(){
+
+let itemsContainerElement = document.querySelector('.itemsContainer');
+
+if(!itemsContainerElement){
+    return;
+}
+
+let innerHtml = '';
+
+items.forEach(item => {
+    innerHtml += `<div class="itemContainer">
+                <img class="itemImage" src="${item.itemImage}" alt="body Scrub Img">
                 <div class="rating">
                     ${item.rating.stars} ⭐ | ${item.rating.noOfReviews}
                 </div>
@@ -26,6 +48,13 @@ itemsContainerElement.innerHTML = `<div class="itemContainer">
                     <span class="originalPrice">Rs. ${item.originalPrice}</span>
                     <span class="discount">(${item.discountPercentage}% OFF)</span>
                 </div>
-                <button class="addToBag">Add to Bag</button>
-            </div>`;
+                <button class="addToBag" onclick="addToBag(${item.id})">Add to Bag</button>
+            </div>`
+})
+
+itemsContainerElement.innerHTML = innerHtml;
+
+
+}
+
 
