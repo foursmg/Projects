@@ -39,5 +39,235 @@ p{
 #header{
     display: flex;        /* put items in a row */
     align-items: center;  /* align them in center*/
-    justify-content: space-between;   /* */
+    justify-content: space-between;   /* puts space between two items, pushes each to left and right side */
+    padding: 20px 40px;   /* 20 80 originally*/
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    left: 0;
 }
+
+#navBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navBar li{
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+    /* background-color: aqua; */
+}
+
+#navBar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.2s ease-in-out;
+}
+
+
+#navBar li a:hover,
+#navBar li a.active{
+    color: #198e59;
+}
+
+#navBar li a.active::after,
+#navBar li a:hover::after{
+    content: "";
+    width: 30%;
+    height:2px;
+    background-color: #198e59;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+/*  Hero Section  */
+#hero{
+    background-image: url("img/hero4.png");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom:15px;
+
+}
+
+#hero h1{
+    color: #088178;
+}
+#hero button{
+    background-image: url("img/button.png");
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+/*  features section    */
+
+.featureContainer{
+    padding: 40px 80px;
+}
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#feature .fe-box{
+    
+    /* width: 180px; */
+    width:180px;
+    
+    text-align: center;   /* text align controls horizontal alignment of inline-level content inside the element. */
+                          /* Here image is also in-line element which is inside .fe-box container */
+                          /* Hence image will get centered also along with text*/
+    padding: 25px 15px;                      
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.1);
+    border:1px solid #cce7d0;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+}
+
+#feature .fe-box h6 {
+    padding: 9px 8px 6px 8px;
+    line-height: 1.1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+    display: inline-block;   /* used to shrink the padding from left and right */
+}
+
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#feature .fe-box:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+
+#feature .fe-box:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+
+#feature .fe-box:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+
+#feature .fe-box:nth-child(5) h6{
+    background-color: #f6dbf6;
+}
+
+#feature .fe-box:nth-child(6) h6{
+    background-color: #fcebdb;
+}
+
+
+
+/* Product1 section*/
+
+.product1Container{
+    padding: 40px 80px;
+}
+
+#product1{
+    text-align: center;
+}
+
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    border-radius: 20px;
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+
+#product1 .pro img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px;
+}
+
+#product1 .pro .des span{
+    color: #000000;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5{
+    padding-top: 4px;
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+#product1 .pro .des h4{
+    font-size: 15px;
+    padding-top: 7px;
+    font-weight: 700;
+    color:#088178 ;
+}
+
+#product1 .pro .des .star{
+    padding: 2px 0px;
+}
+
+#product1 .pro .des .brandName{
+    padding-top: 7px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+#product1 .pro i .cartIcon{
+    width: 80px;
+    height: 28px;
+    line-height: 31px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color:#088178 ;
+    border-color: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+}
+
