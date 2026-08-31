@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+
+/* Header - ------------------------------------------------------------------------------------------------- */
+
+header{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid slateblue; */
+    padding: 10px 40px;
+    background-color: #D1DDEF;
+    box-shadow: 2px 2px 3px #d6dfec ;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+
+header div a img{
+    height: 70px;
+}
+
+header div span.hospital{
+    font-size: 50px;
+    color: #46C9BB;
+    /* font-family: "Changa", sans-serif; */
+    font-weight: 500;
+    text-shadow: 1px 1px 2px #1F8BCC;
+}
+
+#headerLinks a{
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    position: relative;
+}
+
+#headerLinks a span{
+    vertical-align:middle;
+    font-weight: 500;
+}
+
+#headerLinks a:hover,
+#headerLinks a.active{
+    color:#0368D8 ;
+}
+
+
+#headerLinks a.active::after,
+#headerLinks a:hover::after{    /*  ::after ->after Content */
+    content:""; /*  pseudo-element,No visible content --  Anything inside "will get displayed right beside/AFTER target element"   */
+
+    width:30%;
+    height: 2px;
+
+    background-color: #0368D8;
+    
+    position: absolute;  /* position:relative in parent element */
+
+    bottom: -4px;  /*  Moves slightly below <a>*/
+    left: 20.5px;   /* Moves it 20px from the left side of the positioning container */
+
+}
+
+
+
+/*   Banner Section -------------------------------------------------------------------------------*/
+
+#banner{
+    background-image: url('assets/banner.png');
+    
+}
+
