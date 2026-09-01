@@ -34,19 +34,25 @@ p{
     margin: 15px 0 20px 0;
 } */
 
+
+
+
+
 /* Header - ------------------------------------------------------------------------------------------------- */
+
+
 
 header{
     display: flex;
-    height: 80px;
+    height: 90px;
     align-items: center;
     justify-content: space-between;
     /* border: 1px solid slateblue; */
     padding: 10px 40px;
     background-color: #D1DDEF;
 
-    box-shadow: 0 12px 15px rgba(69, 130, 200, 0.06);
-
+    /* box-shadow: 0 12px 15px rgba(69, 130, 200, 0.06); */
+    box-shadow: 0 1px 20px rgba(122, 169, 222, 0.4);
     position: sticky;
     top: 0;
     left: 0;
@@ -173,7 +179,7 @@ header div span.hospital{
 #bannerButton .book{
     font-size: 17px;
     font-weight: 500;
-    width:fit-content ;
+    /* width:fit-content ; */
     display: flex;
     align-items: center;
     padding: 7px 20px;
@@ -190,7 +196,7 @@ header div span.hospital{
 #bannerButton .contact{
     font-size: 17px;
     font-weight: 500;
-    width:fit-content ;
+    /* width:fit-content ; */
     display: flex;
     align-items: center;
     padding: 7px 20px;
@@ -212,4 +218,91 @@ header div span.hospital{
 #bannerButton .contact:hover{
     background-color: #0266D6;
     color: white;
+}
+
+
+
+/*   Newletter Section  ---------------------------------------------------------------------*/
+
+#newsletter{
+    background-image: url('assets/newsletter.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    /* height: 20vh; */
+    margin: 30px 0px;
+}
+
+#newsletter h2{
+    color: white;
+    font-weight: 200;
+}
+#newsletter h2 span{
+    color: #E57B71 ;
+}
+
+#newsletter p{
+    font-size: 15px;
+    color: #1F8BCC;
+    margin: 5px 0 20px 0;
+}
+
+#newsletter .newsletterForm{
+    display: flex;
+    width: 40%;
+}
+
+
+/* input and buttons are flex items inside, button adjacent to input is determining the height of input*/
+/* By default, flex containers have  align-items:strech;     */
+/* So the flex items (input and button) are stretched tot he same height. */
+/*  to stop them from influencing each other's height, use align-items:flex-start; in .newsletterForm*/
+#newsletter input{
+    
+    width: 100%;  
+    /* here width:100%; is not 100% of the screen, its 100% of the parent element's width   */
+    /*  .newletterForm width:100% makes .newsletterForm 40% as wide as its parent   */
+    /*  input width:100% makes input 100% as wide as .newsletterForm    */
+
+
+    font-size: 17px;
+    font-weight: 500;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+    height: 3.2rem;
+    /*  rem - Root EM, It is a relative length unit, tied directly to the font size of the root element i.e. <html> tag */
+    /*  1rem = 16px     */
+    /*  2rem = 32px     */
+    /*  0.5rem = 8px    */
+
+    padding: 0 1em;
+    /*  em  - Relative length unit used to size typography, spacing, margins, and padding.  */
+    /*  Its value is dynamic and changes based on the font size of element or its parent.   */
+    /*  1em is equal to the font-size of the parent element */
+    
+    border: none;
+    outline: none;
+}
+
+#newsletter button{
+    height: 3.2rem;
+    font-size: 17px;
+    font-weight: 500;
+    /* width:fit-content ; */
+    padding: 7px 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color:#0266D6;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s ease-in-out;
 }
